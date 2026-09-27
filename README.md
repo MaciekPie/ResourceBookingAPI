@@ -123,4 +123,4 @@ Przy tworzeniu rezerwacji backend sprawdza, czy dla danego zasobu istnieje już 
 
 ## Autor
 
-Maciej Pieczykolan — projekt końcowy Wakacyjnego Wyzwania Solvro 2026 (ścieżka Backend).
+Maciej Pieczykolan - projekt końcowy Wakacyjnego Wyzwania Solvro 2026.
