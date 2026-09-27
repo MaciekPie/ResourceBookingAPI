@@ -121,6 +121,12 @@ POST /bookings
 
 Przy tworzeniu rezerwacji backend sprawdza, czy dla danego zasobu istnieje już inna, potwierdzona (`CONFIRMED`) rezerwacja, której przedział czasowy nachodzi się na nowo tworzony (`istniejący.start < nowy.end` oraz `istniejący.end > nowy.start`). Jeśli tak, zwracany jest błąd `409 Conflict`.
 
+## Zrzuty ekranu z testów
+
+![Rejestracja](images/register.png)
+![Logowanie](images/login.png)
+![Walidacja kolizji (409)](images/bookings_conflict.png)
+
 ## Autor
 
 Maciej Pieczykolan - projekt końcowy Wakacyjnego Wyzwania Solvro 2026.
