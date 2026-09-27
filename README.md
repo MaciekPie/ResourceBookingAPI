@@ -125,9 +125,13 @@ Przy tworzeniu rezerwacji backend sprawdza, czy dla danego zasobu istnieje już 
 ## Zrzuty ekranu z testów
 
 ### Autoryzacja
+
 Rejestracja:
+
 ![Rejestracja](images/register.png)
+
 Logowanie:
+
 ![Logowanie](images/login.png)
 
 ### Zasoby
