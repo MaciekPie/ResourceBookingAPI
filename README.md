@@ -134,11 +134,11 @@ Logowanie:
 
 Próba dodania zasobu bez zalogowania - 401
 
-![Próba dodania zasobu bez zalogowania - 401](images/resources-without-auth.png)
+![Próba dodania zasobu bez zalogowania - 401](images/resources_without_auth.png)
 
 Dodanie zasobu po zalogowaniu - 201
 
-![Dodanie zasobu po zalogowaniu - 201](images/resources-with-auth.png)
+![Dodanie zasobu po zalogowaniu - 201](images/resources_with_auth.png)
 
 ### Rezerwacje
 Próba utworzenia rezerwacji bez zalogowania - 401
