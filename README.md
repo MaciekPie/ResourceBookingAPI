@@ -121,6 +121,7 @@ POST /bookings
 
 Przy tworzeniu rezerwacji backend sprawdza, czy dla danego zasobu istnieje już inna, potwierdzona (`CONFIRMED`) rezerwacja, której przedział czasowy nachodzi się na nowo tworzony (`istniejący.start < nowy.end` oraz `istniejący.end > nowy.start`). Jeśli tak, zwracany jest błąd `409 Conflict`.
 
+
 ## Zrzuty ekranu z testów
 
 ### Autoryzacja
@@ -130,22 +131,36 @@ Logowanie:
 ![Logowanie](images/login.png)
 
 ### Zasoby
+
 Próba dodania zasobu bez zalogowania - 401
+
 ![Próba dodania zasobu bez zalogowania - 401](images/resources-without-auth.png)
+
 Dodanie zasobu po zalogowaniu - 201
+
 ![Dodanie zasobu po zalogowaniu - 201](images/resources-with-auth.png)
 
 ### Rezerwacje
 Próba utworzenia rezerwacji bez zalogowania - 401
+
 ![Próba utworzenia rezerwacji bez zalogowania - 401](images/bookings_without_auth.png)
+
 Utworzenie rezerwacji po zalogowaniu - 201
+
 ![Utworzenie rezerwacji po zalogowaniu - 201](images/bookings_with_auth.png)
+
 Próba rezerwacji nakładającego się terminu - 409 Conflict
+
 ![Próba rezerwacji nakładającego się terminu - 409 Conflict](images/bookings_conflict.png)
+
 Anulowanie własnej rezerwacji - 200
+
 ![Anulowanie własnej rezerwacji - 200](images/bookings_delete.png)
+
 Próba anulowania cudzej rezerwacji - 403 Forbidden
+
 ![Próba anulowania cudzej rezerwacji - 403 Forbidden](images/bookings_delete_forbidden.png)
+
 
 ## Autor
 
