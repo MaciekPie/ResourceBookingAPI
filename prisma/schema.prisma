@@ -1,0 +1,55 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum ResourceType {
+  ROOM
+  EQUIPMENT
+}
+
+enum BookingStatus {
+  CONFIRMED
+  CANCELLED
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  password  String
+  role      Role      @default(USER)
+  bookings  Booking[]
+  createdAt DateTime  @default(now())
+}
+
+model Resource {
+  id       Int          @id @default(autoincrement())
+  name     String
+  type     ResourceType
+  location String?
+  capacity Int?
+  bookings Booking[]
+}
+
+model Booking {
+  id         Int           @id @default(autoincrement())
+  resourceId Int
+  resource   Resource      @relation(fields: [resourceId], references: [id])
+  userId     Int
+  user       User          @relation(fields: [userId], references: [id])
+  startTime  DateTime
+  endTime    DateTime
+  status     BookingStatus @default(CONFIRMED)
+  purpose    String?
+  createdAt  DateTime      @default(now())
+}
